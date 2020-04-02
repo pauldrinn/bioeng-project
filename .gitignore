@@ -1,1 +1,3 @@
 .DS_Store
+.vscode/
+node2vec/
