@@ -2,7 +2,4 @@
 .vscode/
 node2vec/
 Pipfile
-<<<<<<< HEAD
 Pipfile.lock
-=======
->>>>>>> 065c40fd12ff9656f70063069ae78c8afea436b4
