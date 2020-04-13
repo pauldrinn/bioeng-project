@@ -1,7 +1,7 @@
 library(tidygraph)
 library(dplyr)
 
-network_table <- read.table('fi.txt', header = FALSE)
+network_table <- read.table('FIs_043009.txt', header = FALSE)
 networkasgraph <- as_tbl_graph(network_table)
 
 networkasgraph %>%

@@ -1,0 +1,5 @@
+read_delim('FIs_043009.txt', ' ', col_names=FALSE) 
+    %>% as_tbl_graph() 
+    %>% mutate(node_id = row_number()) 
+    %>% as_tibble() 
+    %>% write_tsv('node_id_name.tsv')

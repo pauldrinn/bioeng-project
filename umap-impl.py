@@ -36,9 +36,6 @@ emb_labels = emb.index.to_numpy()
 for m in metrics:
     for n in metrics:
         filen = 'plots/' + 'M-' + m + '_' + 'OM-' + n + '.png'
-        #hover_data = pd.DataFrame({'index': np.arange(len(emb_labels)), 'label': emb_labels})
-        #umap.plot.output_file(filename = filen)
-        #p = umap.plot.interactive(embmapper, labels = emb_labels, hover_data = hover_data, point_size = 2)
         try:
             embmapper = umap.UMAP(metric = m, output_metric = n, n_epochs= 400).fit(emb_data)
             umap.plot.points(embmapper, labels = emb_labels, show_legend= False, theme = 'fire')

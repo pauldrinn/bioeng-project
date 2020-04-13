@@ -3,3 +3,4 @@
 node2vec/
 Pipfile
 Pipfile.lock
+.ipynb_checkpoints/
