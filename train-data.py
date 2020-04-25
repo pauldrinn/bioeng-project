@@ -28,3 +28,5 @@ for a in range(brcaex.shape[1]):
         nimg[k[i]][l[i]] = [r, g, b]
     
     allimg[a] = nimg
+
+np.save('train-data', allimg)
