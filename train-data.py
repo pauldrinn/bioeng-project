@@ -29,4 +29,4 @@ for a in range(brcaex.shape[1]):
     
     allimg[a] = nimg
 
-np.save('train-data', allimg)
+np.savez_compressed('train-data', allimg)
