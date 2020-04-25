@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+groundt = pd.read_csv('samples_fileid_tumor.tsv', sep = '\t', index_col = 0)
 brcaex = pd.read_csv('brca.csv').rename(columns = {'Unnamed: 0': 'Gene stable ID'})
 template = pd.read_csv('template-data.csv', index_col = 0)
 genes = brcaex.iloc[:, 0]
@@ -29,4 +30,8 @@ for a in range(brcaex.shape[1]):
     
     allimg[a] = nimg
 
-np.savez_compressed('train-data', allimg)
+
+intermediatedf = pd.merge(brcaex.iloc[0:1,:], groundt.transpose(), how = 'outer').dropna(axis = 1)
+labelarray = intermediatedf.loc[1].to_numpy().astype('uint8')
+
+np.savez_compressed('train-data', data = allimg, labels = labelarray)

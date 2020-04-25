@@ -9,9 +9,10 @@ def extractPatientInfo(file, col = 1):
     return patientdf.iloc[:, :col + 1]
 
 def createPatientArray(file):
-    """ Creates an image-ready array filled with patient gene expression data as colored pixels.
+    """ 
+    Creates an image-ready array filled with patient gene expression data as colored pixels.
 
-    file: File name to extract the patient information from. File should have at least 2 columns with the first one containing ENSEMBL gene names and the second one containing expression levels.
+    file: Name of the file from which the patient gene expression data will be extracted. File should have at least 2 columns with the first one containing ENSEMBL gene names and the second one containing expression levels.
     """
     patientex = extractPatientInfo(file)
     template = pd.read_csv('template-data.csv', index_col = 0)
