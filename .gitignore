@@ -4,5 +4,3 @@ node2vec/
 Pipfile
 Pipfile.lock
 .ipynb_checkpoints/
-brca.csv
-train-data.npy
