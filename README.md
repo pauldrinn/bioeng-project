@@ -182,5 +182,5 @@ test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 
 print(test_acc)
 
-tf.saved_model.save(model, "/brcamodel/2/")
+model.save("brca.h5")
 ```
