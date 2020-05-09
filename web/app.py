@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 ALLOWED_EXTENSIONS = {'txt', 'csv', 'tsv'}
 
-predictor = load_model('static/brca.h5')
+predictor = load_model('static/brca/2')
 
 def extractPatientInfo(file, col = 1):
     patientdf = pd.read_csv(file)
@@ -42,12 +42,6 @@ def createPatientArray(file):
     return nimg
 
 app = Flask(__name__)
-
-@app.before_first_request
-def load_model_to_app():
-    predictor = load_model('static/brca.h5')
-    print('SUCCESSFUL')
-    
 
 @app.route("/")
 def index():
