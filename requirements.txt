@@ -116,7 +116,7 @@ tbb==2020.0.133
 tblib==1.6.0
 tensorboard==2.2.1
 tensorboard-plugin-wit==1.6.0.post3
-tensorflow-cpu==2.2.1
+tensorflow-cpu>=2.4.0
 tensorflow-estimator==2.2.0
 tensorflow-hub==0.7.0
 tensorflowjs==1.7.4.post1
