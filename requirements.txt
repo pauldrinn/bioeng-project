@@ -87,7 +87,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycryptodomex==3.9.7
 pyct==0.4.6
-Pygments==2.6.1
+Pygments==2.7.4
 PyInquirer==1.0.3
 pynndescent==0.4.7
 pyparsing==2.4.6
